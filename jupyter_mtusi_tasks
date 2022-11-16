@@ -3,7 +3,17 @@ test_string = '5436'
 
 def count_symbol(input_symbol, input_string, register=True):
     '''
-    
+    The program has several checks for erroneous data entry in addition to its basic functionality
+
+    Checking for input character
+    In addition to the string, it is possible to enter a number. Other types of data cause an error
+
+    The type of input string is strictly a string (this is mentioned in the technical specification)
+
+    The entered string and the character must not be of zero length
+
+    In addition to the basic functionality of the program added to the register flag. By default, 
+    the method used in the function is strictly case-sensitive. It is possible to set the functionality without case sensitivity
     '''
     if not isinstance(input_symbol, str):
         if isinstance(input_symbol, int):
@@ -25,4 +35,3 @@ def count_symbol(input_symbol, input_string, register=True):
     
     
 print(count_symbol(test_symbol, test_string))
-    
