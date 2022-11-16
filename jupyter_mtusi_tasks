@@ -1,6 +1,6 @@
 
 
-test_symbol = ''
+test_symbol = '4'
 test_string = '5436'
 test_list = [1, 2, 3, 4, 5]
 
