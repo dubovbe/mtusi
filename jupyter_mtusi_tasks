@@ -1,13 +1,28 @@
-'''
 
-                            Online Python Compiler.
-                Code, Compile, Run and Debug python program online.
-Write your code in this editor and press "Run" button to execute it.
-
-'''
 
 test_symbol = ''
 test_string = '5436'
+test_list = [1, 2, 3, 4, 5]
+
+
+def first_last_list_element(input_list):
+    '''
+    Input:
+    input_list(list)
+    Output:
+    A tuple that contains the first and the last element of a list
+    
+    The logic of the script checks for incorrect data entry (incorrect data type) 
+    and entry of an list of zero length
+    '''
+    if not isinstance(input_list, list):
+        print('Input data type is not list')
+        return
+    if len(input_list) == 0:
+        print('Input list lenght is zero')
+        return
+    return input_list[0], input_list[-1]
+        
 
 def count_symbol(input_symbol, input_string, register=True):
     '''
@@ -48,7 +63,8 @@ def count_symbol(input_symbol, input_string, register=True):
         symbol_counter = input_string.lower().count(input_symbol.lower())
     return symbol_counter
     
-    
+
+print (first_last_list_element(test_list))
 print(count_symbol(test_symbol, test_string))
     
     
