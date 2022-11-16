@@ -68,3 +68,21 @@ print (first_last_list_element(test_list))
 print(count_symbol(test_symbol, test_string))
     
     
+def is_prime(n):
+    '''
+    Any composite number has an intrinsic (that is, not equal to 1) divisor that 
+    does not exceed the square root of the number.
+
+    Such an algorithm terminates either when it finds the divisor, or if the tested 
+    divisor becomes greater than the root of n. A number n is prime if the algorithm 
+    terminates because the checkable divisor is greater than the root of n.
+    '''
+    if n % 2 == 0:
+        return n == 2
+    d = 3
+    while d * d <= n and n % d != 0:
+        d += 2
+    return d * d > n
+    
+
+print(is_prime(1))
