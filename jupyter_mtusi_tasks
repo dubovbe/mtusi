@@ -1,8 +1,23 @@
+'''
+
+                            Online Python Compiler.
+                Code, Compile, Run and Debug python program online.
+Write your code in this editor and press "Run" button to execute it.
+
+'''
+
 test_symbol = ''
 test_string = '5436'
 
 def count_symbol(input_symbol, input_string, register=True):
     '''
+    Input:
+    input_symbol (str, int)
+    input_string (str)
+    register (bool) flag - by default it is case-sensitive
+    Output:
+    symbol_counter(int): the number of symbols that occur in the string
+    About:
     The program has several checks for erroneous data entry in addition to its basic functionality
 
     Checking for input character
@@ -35,3 +50,5 @@ def count_symbol(input_symbol, input_string, register=True):
     
     
 print(count_symbol(test_symbol, test_string))
+    
+    
