@@ -1,0 +1,28 @@
+test_symbol = ''
+test_string = '5436'
+
+def count_symbol(input_symbol, input_string, register=True):
+    '''
+    
+    '''
+    if not isinstance(input_symbol, str):
+        if isinstance(input_symbol, int):
+            input_symbol = str(input_symbol)
+        else:
+            print('Error: data type of the entered symbol not correct')
+            return
+    if not isinstance(input_string, str):
+        print('Error: data type of the entered string not correct')
+        return
+    if len(input_symbol) == 0 or len(input_string) == 0:
+        print('Error: input symbol or string is empty')
+        return
+    if register:
+        symbol_counter = input_string.count(input_symbol)
+    else:
+        symbol_counter = input_string.lower().count(input_symbol.lower())
+    return symbol_counter
+    
+    
+print(count_symbol(test_symbol, test_string))
+    
